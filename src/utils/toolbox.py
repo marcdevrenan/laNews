@@ -12,9 +12,9 @@ class Toolbox:
     @staticmethod
     def convert_to_filename(text, max_lenght=25, extension=".jpg"):
         cleaned_text = re.sub(r"[^\w\s]", "", text).replace(" ", "_")
-        filename = cleaned_text[:max_lenght].strip()
+        filename = cleaned_text[:max_lenght].strip().lower()
         if len(filename) == max_lenght and filename[max_lenght - 1] == "_":
-            filename = filename[: max_lenght - 1].strip().lower()
+            filename = filename[: max_lenght - 1].strip()
 
         return filename + extension
 
@@ -38,7 +38,7 @@ class Toolbox:
         try:
             logger.info("Generating csv file")
             data = pandas.DataFrame([asdict(article) for article in articles])
-            data.to_csv(f"temp/results_for_{SEARCH_PHRASE}.csv", index=False)
+            data.to_csv(f"output/results_for_{SEARCH_PHRASE}.csv", index=False)
             logger.info("Results successfully stored")
         except Exception as e:
             logger.error(f"Error generating csv file: {e}")
