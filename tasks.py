@@ -1,5 +1,6 @@
-from src.services.la_news import LANews
 from loguru import logger
+
+from src.services.la_news import LANews
 
 
 def Start():

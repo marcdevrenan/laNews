@@ -1,11 +1,12 @@
-from RPA.Browser.Selenium import Selenium
-from loguru import logger
-from src.config import BASE_URL, SEARCH_PHRASE, NEWS_TOPIC
-from src.resources.locators import Locator as LO
-from src.utils.toolbox import Toolbox
-from src.services.crawler import Crawler
-
 import time
+
+from loguru import logger
+from RPA.Browser.Selenium import Selenium
+
+from src.config import BASE_URL, NEWS_TOPIC, SEARCH_PHRASE
+from src.resources.locators import Locator as LO
+from src.services.crawler import Crawler
+from src.utils.toolbox import Toolbox
 
 
 class LANews:

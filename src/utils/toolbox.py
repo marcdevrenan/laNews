@@ -1,10 +1,11 @@
-from dataclasses import asdict
-from loguru import logger
-from src.models.articles import Article
-from src.config import SEARCH_PHRASE
-
 import re
+from dataclasses import asdict
+
 import pandas
+from loguru import logger
+
+from src.config import SEARCH_PHRASE
+from src.models.articles import Article
 
 
 class Toolbox:

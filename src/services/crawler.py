@@ -1,11 +1,11 @@
-from RPA.Browser.Selenium import Selenium, By
-from loguru import logger
-from src.config import SEARCH_PHRASE
-from src.resources.locators import Locator as LO
-from src.models.articles import Article
-from src.utils.toolbox import Toolbox
-
 import requests
+from loguru import logger
+from RPA.Browser.Selenium import By, Selenium
+
+from src.config import SEARCH_PHRASE
+from src.models.articles import Article
+from src.resources.locators import Locator as LO
+from src.utils.toolbox import Toolbox
 
 
 class Crawler:
