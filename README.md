@@ -1,0 +1,2 @@
+# laNews
+ThoughtfulAI RPA Challenge
