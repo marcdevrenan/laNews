@@ -27,7 +27,6 @@ class LANews:
     def filter_topic(self):
         logger.info(f'Filtering topic {NEWS_TOPIC}')
         self.browser.click_button_when_visible(LO.SHOW_TOPICS)
-        # for topic in NEWS_TOPIC:
         self.browser.click_button_when_visible(f'//label[contains(span, "{NEWS_TOPIC}")]/input[@type="checkbox"]')
             
     def sort_newest(self):
