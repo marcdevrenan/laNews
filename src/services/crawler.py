@@ -48,7 +48,7 @@ class Crawler:
             ).get_attribute("srcset")
             picture_url = picture.split(".jpg")[0] + ".jpg"
             file_name = Toolbox.convert_to_filename(title)
-            with open(f"temp/{file_name}", "wb") as file:
+            with open(f"output/{file_name}", "wb") as file:
                 file.write(requests.get(picture_url).content)
 
             return file_name
