@@ -8,5 +8,6 @@ def Start():
     except Exception as e:
         logger.error("Error")
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     Start()
