@@ -1,8 +1,9 @@
+from robocorp.tasks import task
 from loguru import logger
 
 from src.services.la_news import LANews
 
-
+@task
 def Start():
     try:
         LANews().process()
