@@ -7,7 +7,7 @@ def Start():
     try:
         LANews().process()
     except Exception as e:
-        logger.error("Error")
+        logger.error(f"Process execution error: {e}")
 
 
 if __name__ == "__main__":
